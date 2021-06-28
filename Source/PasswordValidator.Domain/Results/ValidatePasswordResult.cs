@@ -22,6 +22,11 @@ namespace PasswordValidator.Domain.Results
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         public IEnumerable<string> Errors { get; private set; }
 
+        public string ToJson()
+        {
+            return JsonSerializer.Serialize(this);
+        }
+
         public static ValidatePasswordResult FromJson(string json)
         {
             return JsonSerializer.Deserialize<ValidatePasswordResult>(json);

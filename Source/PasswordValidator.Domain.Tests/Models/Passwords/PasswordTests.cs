@@ -22,7 +22,7 @@ namespace PasswordValidator.Domain.Tests.Models.Passwords
         [InlineData("!@#")]
         [InlineData("abcXYZ123!@#")]
         [InlineData("1234abcdWXYZ!@#$")]
-        public void Serialize_Password_JsonString(string value)
+        public void Serialize_PasswordObject_JsonString(string value)
         {
             // Arrange
             string expected = "{\"value\":\"" + value + "\"}";

@@ -14,7 +14,11 @@ namespace PasswordValidator.Domain.Models.PasswordsRules
             {
                 // quando o método Add() do HashSet retorna false, significa que o elemento já está presente,
                 // portanto temos um caractere duplicado e não é necessário continuar a iteração na string
-                if (!chars.Add(c)) return false;
+
+                if (!chars.Add(c))
+                {
+                    return false;
+                }
             }
 
             return true;

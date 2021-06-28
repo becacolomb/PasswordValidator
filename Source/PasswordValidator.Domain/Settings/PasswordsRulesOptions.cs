@@ -1,7 +1,9 @@
 ﻿using PasswordValidator.Domain.Models.PasswordsRules;
+using System.Diagnostics.CodeAnalysis;
 
 namespace PasswordValidator.Domain.Settings
 {
+    [ExcludeFromCodeCoverage]
     public class PasswordsRulesOptions
     {
         public AllowedPasswordRule Allowed { get; set; }

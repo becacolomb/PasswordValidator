@@ -11,8 +11,10 @@ namespace PasswordValidator.Domain.Models.PasswordsRules
 
             foreach (char c in password.Value)
             {
-                if (c >= 'A' && c <= 'Z') count++;
-                if (count == Min) return true;
+                if (c >= 'A' && c <= 'Z' && ++count == Min)
+                {
+                    return true;
+                }
             }
 
             return false;

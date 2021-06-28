@@ -9,7 +9,10 @@ namespace PasswordValidator.Domain.Models.PasswordsRules
         {
             foreach (char c in password.Value)
             {
-                if (!Chars.Contains(c)) return false;
+                if (!Chars.Contains(c))
+                {
+                    return false;
+                }
             }
 
             return true;

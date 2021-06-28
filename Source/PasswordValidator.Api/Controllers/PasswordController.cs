@@ -16,6 +16,7 @@ namespace PasswordValidator.Api.Controllers
     public class PasswordController : ControllerBase
     {
         // o MediatR foi a única biblioteca não-nativa do .NET utilizada no projeto
+
         private readonly IMediator _mediator;
         private readonly ILogger<PasswordController> _logger;
 

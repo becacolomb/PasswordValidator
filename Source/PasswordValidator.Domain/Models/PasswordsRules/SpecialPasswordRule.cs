@@ -11,8 +11,10 @@ namespace PasswordValidator.Domain.Models.PasswordsRules
 
             foreach (char c in password.Value)
             {
-                if (Chars.Contains(c)) count++;
-                if (count == Min) return true;
+                if (Chars.Contains(c) && ++count == Min)
+                {
+                    return true;
+                }
             }
 
             return false;
